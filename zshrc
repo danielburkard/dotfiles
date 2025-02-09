@@ -28,11 +28,15 @@ source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 
+# Set up fzf key bindings and fuzzy completion
+source <(fzf --zsh)
+
 # aliases
 
 alias ls="eza --icons=always"
 alias hocker="$HOME/Developer/hrv-hocker/hocker.sh"
 alias gpin="[ -d .git ] && git pull"
+alias inv='fzf -m --preview="bat --color=always {}" | xargs nvim'
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
