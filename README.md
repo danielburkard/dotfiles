@@ -29,7 +29,7 @@ brew install --cask iterm2 font-fira-code-nerd-font
 Zsh is the standard shell on macOS
 
 ```shell
-brew install zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete
+brew install zsh-syntax-highlighting zsh-autosuggestions zsh-autocomplete fzf
 ln -s ~/Developer/dotfiles/zshrc ~/.zshrc
 ln -s ~/Developer/dotfiles/zshenv ~/.zshenv
 ln -s ~/Developer/dotfiles/zprofile ~/.zprofile
