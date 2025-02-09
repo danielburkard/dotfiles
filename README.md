@@ -38,7 +38,7 @@ ln -s ~/Developer/dotfiles/zprofile ~/.zprofile
 ## Setup powerlevel10k
 ```shell
 brew install powerlevel10k
-ln -s ~/Developer/dotfiles/config/p10k.tmux ~/.config/p10k.tmux
+ln -s ~/Developer/dotfiles/config/p10k.zsh ~/.config/p10k.zsh
 ```
 
 ## Setup tmux
