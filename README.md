@@ -12,7 +12,7 @@ mkdir ~/.config
 
 ## Clone Repo
 ```shell
-git clone git@github.com:danielburkard/dotfiles.git ~/Developer/
+git clone git@github.com:danielburkard/dotfiles.git ~/Developer/dotfiles
 ```
 
 ## Install dependencies from Brewfile
