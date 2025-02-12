@@ -31,8 +31,10 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Set up fzf key bindings and fuzzy completion
 source <(fzf --zsh)
 
-# aliases
+# Set up zoxide
+eval "$(zoxide init --cmd cd zsh)"
 
+# aliases
 alias ls="eza --icons=always"
 alias hocker="$HOME/Developer/hrv-hocker/hocker.sh"
 alias gpin="[ -d .git ] && git pull"
