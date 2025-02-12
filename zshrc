@@ -38,7 +38,25 @@ eval "$(zoxide init --cmd cd zsh)"
 alias ls="eza --icons=always"
 alias hocker="$HOME/Developer/hrv-hocker/hocker.sh"
 alias gpin="[ -d .git ] && git pull"
-alias inv='fzf -m --preview="bat --color=always {}" | xargs nvim'
+
+# fcd () {
+# 	fzf \
+# 		--walker dir,hidden,follow \
+# 		--walker-skip .git,Library \
+# 		--preview="eza -a {}" \
+# 		--bind "enter:become(cd {})"
+# }
+
+fvi () {
+	fzf \
+		--preview-window right:60%:wrap \
+		--walker file,hidden,follow \
+		--walker-skip .git,Library \
+		--preview "bat --color=always {}" \
+		--bind "enter:become(nvim {+})"
+}
+
+export FZF_DEFAULT_OPTS='--height 60% --tmux center --layout reverse --style full --border top --style full'
 
 export NVM_DIR="$HOME/.nvm"
   [ -s "/opt/homebrew/opt/nvm/nvm.sh" ] && \. "/opt/homebrew/opt/nvm/nvm.sh"  # This loads nvm
